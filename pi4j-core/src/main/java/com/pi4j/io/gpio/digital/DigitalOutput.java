@@ -186,6 +186,16 @@ public interface DigitalOutput extends Digital<DigitalOutput, DigitalOutputConfi
         return this.state(DigitalState.getState(state));
     }
     /**
+     * <p>setState.</p>
+     *
+     * @param state a DigitalState.
+     * @return a {@link com.pi4j.io.gpio.digital.DigitalOutput} object.
+     * @throws IOException if any.
+     */
+    default DigitalOutput setState(DigitalState state) throws IOException {
+        return this.state(state);
+    }
+    /**
      * <p>high.</p>
      *
      * @return a {@link com.pi4j.io.gpio.digital.DigitalOutput} object.
